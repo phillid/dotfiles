@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for i in $(ls -1 | grep -v $(basename $0)) ; do
+	ln -s ${PWD/$HOME\//}/$i $HOME/.$i
+done
+
+# extra symlinks
+pushd $HOME
+ln -s .bash_profile .bashrc
+popd
