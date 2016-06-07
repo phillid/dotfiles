@@ -28,8 +28,10 @@ PS1="${BYellow}\
 
 export GPG_TTY=$(tty)
 export EDITOR=/usr/bin/vim
-export CC=clang
-export CXX=clang
+if [ $(which clang 2>/dev/null) ]; then
+	export CC=clang
+	export CXX=clang
+fi
 
 alias sudo="sudo "
 alias monut=mount
