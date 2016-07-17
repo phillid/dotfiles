@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 . /etc/bash_colours
+source /usr/share/git/completion/git-prompt.sh
 
 # Force false terminal to get colour with (eg) ls within dvtm
 if [ "$TERM" == "dvtm-256color" ]; then 
@@ -22,10 +23,9 @@ man() {
 }
 ###############
 PS1="${BYellow}\
-┌[${BGreen}\u${BYellow}@${BBlue}\h${BYellow}][${BPurple}\W${BYellow}] ${BBlack}<\d \t>${BYellow}\n\
+┌[${BGreen}\u${BYellow}@${BBlue}\h${BYellow}][${BPurple}\W${BYellow}"'$(__git_ps1 " (%s)")'"] ${BBlack}<\d \t>${BYellow}\n\
 └╼ \[${Colour_Off}\]"
 ###############
-
 export GPG_TTY=$(tty)
 export EDITOR=/usr/bin/vim
 if [ $(which clang 2>/dev/null) ]; then
