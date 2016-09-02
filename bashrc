@@ -28,9 +28,12 @@ PS1="${BYellow}\
 ###############
 export GPG_TTY=$(tty)
 export EDITOR=/usr/bin/vim
+
 if [ $(which clang 2>/dev/null) ]; then
 	export CC=clang
 	export CXX=clang
+elif [[ $(which tcc 2>/dev/null) && !$(which gcc 2>/dev/null) ]]; then
+	export CC=tcc
 fi
 
 alias sudo="sudo "
