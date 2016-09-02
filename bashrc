@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+export HISTSIZE=10000
+export HISTTIMEFORMAT="%y-%m-%d %T "
+
 . /etc/bash_colours
 source /usr/share/git/completion/git-prompt.sh
 
@@ -38,6 +41,7 @@ alias monut=mount
 alias pamcan=pacman
 #alias scron="sudo EDITOR=nano crontab -e"
 alias ls="/bin/ls --color=auto"
+alias fimp="gimp"
 alias sl=ls
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
