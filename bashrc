@@ -66,4 +66,4 @@ if [ -f ~/.cache/weather/forecast ]; then
 		cat ~/.cache/weather/forecast | while read -r l ; do echo " "$l ; done 
 fi
 
-[ "$(ls ~/Maildir/new/)" ] && echo 'New mail'
+[ -d ~/Maildir/new/ ] && [ "$(ls ~/Maildir/new/)" ] && echo 'New mail'
