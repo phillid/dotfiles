@@ -58,8 +58,6 @@ echo Running $(uname) $(uname -r) on $(uname -n) \($(uname -m)\)
 if [ -f ~/todo ]; then
 	echo To do:
 	cat ~/todo
-else
-	echo To do list empty
 fi
 
 if [ -f ~/.cache/weather/forecast ]; then
@@ -67,3 +65,5 @@ if [ -f ~/.cache/weather/forecast ]; then
 		echo Weather:
 		cat ~/.cache/weather/forecast | while read -r l ; do echo " "$l ; done 
 fi
+
+[ "$(ls ~/Maildir/new/)" ] && echo 'New mail'
