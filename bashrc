@@ -9,9 +9,10 @@ source /usr/share/git/completion/git-prompt.sh
 # Force false terminal to get colour with (eg) ls within dvtm
 if [ "$TERM" == "dvtm-256color" ]; then 
 	TERM=rxvt-256color
-	# Quick fix for readline Del key in st
-	# disabled 2016-01-21
-	#echo $(tput smkx) > /dev/tty
+fi
+if [ "$TERM" == "st-256color" ]; then
+	# Quick fix for Del key in st
+	echo $(tput smkx) > /dev/tty
 fi
 
 man() {
@@ -51,6 +52,10 @@ alias egrep="egrep --color=auto"
 alias xpdf="xpdf -cont"
 alias feh="feh --magick-timeout=0"
 alias xclip="xclip -selection c"
+
+
+# u=rwx,g=,o=
+umask 077
 
 echo Running $(uname) $(uname -r) on $(uname -n) \($(uname -m)\)
 
