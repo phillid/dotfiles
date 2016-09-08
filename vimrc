@@ -6,6 +6,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+map <ESC>[1;5C <C-Right>
+map <ESC>[1;5D <C-Left>
+
 "set listchars=tab:▸\ ,trail:·,space:·
 set listchars=tab:→\ ,trail:·,space:·
 set list
