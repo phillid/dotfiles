@@ -53,7 +53,16 @@ alias egrep="egrep --color=auto"
 alias xpdf="xpdf -cont"
 alias feh="feh --magick-timeout=0"
 alias xclip="xclip -selection c"
+alias pd=popd
 
+cd() {
+	if [ $# -eq 0 ] ; then
+		d=$HOME
+	else
+		d=$@
+	fi
+	pushd "$d" >/dev/null
+}
 
 # u=rwx,g=,o=
 umask 077
