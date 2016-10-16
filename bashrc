@@ -7,9 +7,10 @@ export HISTTIMEFORMAT="%y-%m-%d %T "
 source /usr/share/git/completion/git-prompt.sh
 
 # Force false terminal to get colour with (eg) ls within dvtm
-if [ "$TERM" == "dvtm-256color" ]; then 
-	TERM=rxvt-256color
-fi
+# Disabled 2016-10-16: kiff doesn't have this problem.
+#if [ "$TERM" == "dvtm-256color" ]; then 
+#	TERM=rxvt-256color
+#fi
 if [ "$TERM" == "st-256color" ]; then
 	# Quick fix for Del key in st
 	echo $(tput smkx) > /dev/tty
