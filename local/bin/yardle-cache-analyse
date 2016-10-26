@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -z $1 ]; then
+	echo Usage: $0 '<cache_dir>'
+	exit 1
+fi
+
+ls -1 $1 | while read -r file ; do 
+	ts=$(head -n 1 $1/$file)
+	echo Created $(date --date=@$ts), $file
+done

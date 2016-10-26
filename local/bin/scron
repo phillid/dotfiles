@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+echo scron - super user\'s cron
+sudo EDITOR=$EDITOR crontab -e

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+DELAY=20
+sep=$(echo -e '\u2502')
+
+while true; do
+	bat="$(cat /sys/class/power_supply/BAT0/capacity)%"
+	case "$(cat /sys/class/power_supply/BAT0/status)" in
+		Full)
+			bat_icon='✓'
+			;;
+		Charging)
+			bat_icon='▲'
+			;;
+		Discharging)
+			bat_icon='▼'
+			;;
+		*)
+			bat_icon="(?)"
+			;;
+	esac
+	bat_string="$bat_icon $bat"
+	datetime_string=$(date "+%A $sep %d %h %Y $sep %_I:%M %p (UTC%:::z)")
+	xsetroot -name "$(uname -r) $sep $bat_string $sep $datetime_string" || exit
+	sleep "$DELAY"
+done
+
