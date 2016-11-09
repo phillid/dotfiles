@@ -25,6 +25,11 @@ man() {
         LESS_TERMCAP_us=$'\E[04;38;5;146m' \
         man "$@"
 }
+
+ccc () {
+	bc -l <<< "$@"
+}
+
 ###############
 PS1="${BYellow}\
 ┌[${BGreen}\u${BYellow}@${BBlue}\h${BYellow}][${BPurple}\W${BYellow}"'$(__git_ps1 " (%s)")'"] ${BBlack}<\d \t>${BYellow}\n\
