@@ -3,7 +3,7 @@
 cd $(dirname $0)
 
 for i in $(find -maxdepth 1 -type f | grep -v $(basename $0)) ; do
-	ln -s ${PWD/$HOME\//}/$i $HOME/.$i
+	ln -s ${PWD/$HOME\//}/$i $HOME/.${i#./}
 done
 
 # extra symlinks
