@@ -99,7 +99,7 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias xpdf="xpdf -cont"
 alias feh="feh --magick-timeout=0"
-alias xclip="xclip -selection c"
+alias xcp="xclip -selection c"
 alias pd=popd
 alias po='pushd $OLDPWD'
 
