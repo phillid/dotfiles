@@ -4,4 +4,4 @@ n=$1
 
 [ -z $n ] && n=1
 
-mplayer tv:// -tv device=/dev/video$n -vf screenshot
+mpv tv:// -tv device=/dev/video$n
