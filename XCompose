@@ -1,8 +1,10 @@
 include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+WMAN
 
 # USEFUL STUFF
 <Multi_key> <d> <o> <t>                        : "·" # Mid dot for multiplication or units
 <Multi_key> <0> <space>                        : "​" # U200b ZERO WIDTH SPACE
+<Multi_key> <h> <period>                       : "｡" # HALFWIDTH IDEOGRAPHIC FULL STOP
 
 # EMOTICONS
 <Multi_key> <less> <3>                         : "❤"   # Nicer heart than default (♥)
@@ -25,6 +27,8 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <l> <e> <n> <n> <y>                : "( ͡° ͜ ʖ ͡° )"
 <Multi_key> <plus> <plus>                      : "👍"
 <Multi_key> <i> <u> <n> <n> <o>                : "¯\\_(ツ)_/¯" # shrug
+<Multi_key> <s> <n> <o> <w>                    : "☃" U2603 # SNOWMAN
+<Multi_key> <b> <s> <n> <o> <w>                : "⛇" U26C7 # SNOWMAN
 <Multi_key> <k> <o> <a> <l> <a>                : "ʕ•ᴥ•ʔ" # koala
 
 # BLACKBOARD BOLD UPPERCASE, 1 0
@@ -57,7 +61,33 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <B> <1>                            : "𝟙"
 <Multi_key> <B> <0>                            : "𝟘"
 
-# WIDE CHARACTERS UPPERCASE, NUMBERS, BASIC PUNCTUATION
+# WIDE CHARACTERS
+<Multi_key> <W> <a>                            : "ａ"
+<Multi_key> <W> <b>                            : "ｂ"
+<Multi_key> <W> <c>                            : "ｃ"
+<Multi_key> <W> <d>                            : "ｄ"
+<Multi_key> <W> <e>                            : "ｅ"
+<Multi_key> <W> <f>                            : "ｆ"
+<Multi_key> <W> <g>                            : "ｇ"
+<Multi_key> <W> <h>                            : "ｈ"
+<Multi_key> <W> <i>                            : "ｉ"
+<Multi_key> <W> <j>                            : "ｊ"
+<Multi_key> <W> <k>                            : "ｋ"
+<Multi_key> <W> <l>                            : "ｌ"
+<Multi_key> <W> <m>                            : "ｍ"
+<Multi_key> <W> <n>                            : "ｎ"
+<Multi_key> <W> <o>                            : "ｏ"
+<Multi_key> <W> <p>                            : "ｐ"
+<Multi_key> <W> <q>                            : "ｑ"
+<Multi_key> <W> <r>                            : "ｒ"
+<Multi_key> <W> <s>                            : "ｓ"
+<Multi_key> <W> <t>                            : "ｔ"
+<Multi_key> <W> <u>                            : "ｕ"
+<Multi_key> <W> <v>                            : "ｖ"
+<Multi_key> <W> <w>                            : "ｗ"
+<Multi_key> <W> <x>                            : "ｘ"
+<Multi_key> <W> <y>                            : "ｙ"
+<Multi_key> <W> <z>                            : "ｚ"
 <Multi_key> <W> <A>                            : "Ａ"
 <Multi_key> <W> <B>                            : "Ｂ"
 <Multi_key> <W> <C>                            : "Ｃ"
@@ -94,14 +124,43 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <W> <7>                            : "７"
 <Multi_key> <W> <8>                            : "８"
 <Multi_key> <W> <9>                            : "９"
-<Multi_key> <W> <period>                       : "．"
-<Multi_key> <W> <comma>                        : "，"
+
+<Multi_key> <W> <quotedbl>                     : "＂"
+<Multi_key> <W> <exclam>                       : "！"
+<Multi_key> <W> <numbersign>                   : "＃"
+<Multi_key> <W> <dollar>                       : "＄"
+<Multi_key> <W> <percent>                      : "％"
+<Multi_key> <W> <ampersand>                    : "＆"
 <Multi_key> <W> <parenleft>                    : "（"
 <Multi_key> <W> <parenright>                   : "）"
+<Multi_key> <W> <asterisk>                     : "＊"
+<Multi_key> <W> <plus>                         : "＋"
+<Multi_key> <W> <comma>                        : "，"
+<Multi_key> <W> <minus>                        : "－"
+<Multi_key> <W> <period>                       : "．"
+<Multi_key> <W> <slash>                        : "／"
+<Multi_key> <W> <colon>                        : "："
+<Multi_key> <W> <semicolon>                    : "；"
+<Multi_key> <W> <less>                         : "＜"
+<Multi_key> <W> <equal>                        : "＝"
+<Multi_key> <W> <greater>                      : "＞"
 <Multi_key> <W> <question>                     : "？"
-<Multi_key> <W> <exclam>                       : "！"
+<Multi_key> <W> <at>                           : "＠"
+<Multi_key> <W> <bracketleft>                  : "［"
+<Multi_key> <W> <backslash>                    : "＼"
+<Multi_key> <W> <bracketright>                 : "］"
+<Multi_key> <W> <underscore>                   : "＿"
+<Multi_key> <W> <grave>                        : "｀"
+<Multi_key> <W> <braceleft>                    : "｛"
+<Multi_key> <W> <bar>                          : "｜"
+<Multi_key> <W> <braceright>                   : "｝"
+<Multi_key> <W> <asciitilde>                   : "～"
 <Multi_key> <W> <apostrophe>                   : "＇"
 <Multi_key> <W> <space>                        : "　"
+
+
+
+
 
 # PUNCTUATION
 <Multi_key> <bracketright> <apostrophe> : "’"   U2019    # RIGHT SINGLE QUOTATION MARK
