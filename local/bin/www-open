@@ -1,0 +1,7 @@
+#!/bin/sh
+
+read -r url
+
+if [ ! -z "$url" ]; then
+	firefox "$url"
+fi
