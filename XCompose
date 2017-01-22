@@ -1,5 +1,4 @@
 include "/usr/share/X11/locale/en_US.UTF-8/Compose"
-WMAN
 
 # USEFUL STUFF
 <Multi_key> <d> <o> <t>                        : "·" # Mid dot for multiplication or units
@@ -30,6 +29,7 @@ WMAN
 <Multi_key> <s> <n> <o> <w>                    : "☃" U2603 # SNOWMAN
 <Multi_key> <b> <s> <n> <o> <w>                : "⛇" U26C7 # SNOWMAN
 <Multi_key> <k> <o> <a> <l> <a>                : "ʕ•ᴥ•ʔ" # koala
+<Multi_key> <y> <e> <s>                        : "✔" # tick
 
 # BLACKBOARD BOLD UPPERCASE, 1 0
 <Multi_key> <B> <A>                            : "𝔸"

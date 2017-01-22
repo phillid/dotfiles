@@ -1,0 +1,13 @@
+#!/bin/sh
+
+DELAY=300
+
+while true; do
+	activ_win_id=$(xprop -root _NET_ACTIVE_WINDOW)
+	if result=$(xprop -id ${activ_win_id:40:9} | grep _NET_WM_STATE_FULLSCREEN); then
+		xdotool key Shift
+		xset -dpms
+		xset dpms
+	fi
+	sleep "$DELAY"
+done
