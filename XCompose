@@ -25,7 +25,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <parenleft> <colon>                : "🙃"   # upside down smile
 <Multi_key> <l> <e> <n> <n> <y>                : "( ͡° ͜ ʖ ͡° )"
 <Multi_key> <plus> <plus>                      : "👍"   # Thumbs up
-<Multi_key> <b> <o> <o>                        : "👎" # Thumbs down
+<Multi_key> <equal> <equal>                    : "👎" # Thumbs down
 <Multi_key> <i> <u> <n> <n> <o>                : "¯\\_(ツ)_/¯" # shrug
 <Multi_key> <s> <n> <o> <w>                    : "☃" U2603 # SNOWMAN
 <Multi_key> <b> <s> <n> <o> <w>                : "⛇" U26C7 # BLACK SNOWMAN
