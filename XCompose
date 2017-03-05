@@ -4,6 +4,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <d> <o> <t>                        : "·" # Mid dot for multiplication or units
 <Multi_key> <0> <space>                        : "​" # U200b ZERO WIDTH SPACE
 <Multi_key> <h> <period>                       : "｡" # HALFWIDTH IDEOGRAPHIC FULL STOP
+<Multi_key> <s> <a> <x>                        : "🎷" # Saxamaphone
 
 # EMOTICONS
 <Multi_key> <less> <3>                         : "❤"   # Nicer heart than default (♥)
