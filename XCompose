@@ -33,6 +33,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <k> <o> <a> <l> <a>                : "ʕ•ᴥ•ʔ" # koala
 <Multi_key> <y> <e> <s>                        : "✔" # tick
 <Multi_key> <n> <o>                            : "❌" # cross
+<Multi_key> <d> <o> <g>                        : "🐶" # doggo
 
 # BLACKBOARD BOLD UPPERCASE, 1 0
 <Multi_key> <B> <A>                            : "𝔸"
