@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
 DELAY=20
 sep=$(echo -e '\u2502')
 
 while true; do
 	if [ -f ~/.cache/XAGNZD ]; then
-		xag="$(cat ~/.cache/XAGNZD) $sep"
+		xag="$(cat ~/.cache/XAGNZD) $sep "
 	fi
-	if [ -d /sys/class/power_suppply/BAT0/ ]; then
+	if [ -d "/sys/class/power_supply/BAT0/" ]; then
 		bat="$(cat /sys/class/power_supply/BAT0/capacity)%"
 		case "$(cat /sys/class/power_supply/BAT0/status)" in
 			Full)
@@ -32,7 +32,7 @@ while true; do
 	done
 	thermal_string="${thermal_string%,} °C"
 	datetime_string=$(date "+%A $sep %d %h %Y $sep %_I:%M %p (UTC%:::z)")
-	xsetroot -name "$xag $thermal_string $sep $bat_string$datetime_string" || exit
+	xsetroot -name "$xag$thermal_string $sep $bat_string$datetime_string" || exit
 	sleep "$DELAY"
 done
 
