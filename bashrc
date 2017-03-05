@@ -130,3 +130,4 @@ if [ -f ~/.cache/weather/forecast ]; then
 fi
 
 [ -d ~/Maildir/new/ ] && [ "$(ls ~/Maildir/new/)" ] && echo 'New mail'
+[ -f ~/.cache/XAGNZD ] && echo "$(cat ~/.cache/XAGNZD) (at $(date +"%a %d %H:%M" --date=@$(stat -c %Y ~/.cache/XAGNZD)))"
