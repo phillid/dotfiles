@@ -1,0 +1,13 @@
+
+if [ -z $1 ]; then
+	logger "$0: blank FROM currency"
+	exit
+fi
+if [ -z $2 ]; then
+	logger "$0: blank TO currency"
+	exit
+fi
+
+rate=$(curl "http://rate-exchange-1.appspot.com/currency?from=$1&to=$2" | jshon -e rate)
+
+echo "$1$2: $rate" > ~/.cache/"$1$2"
