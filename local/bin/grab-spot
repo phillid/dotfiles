@@ -9,7 +9,7 @@ if [ -z $2 ]; then
 fi
 
 # Only bother downloading if it's more than 3 hours old
-if [ $(find ~/.cache/"$1$2" -mmin +180) ] ; then
+if [ $(find ~/.cache/"$1$2" -mmin +60) ] ; then
 	rate=$(curl "http://rate-exchange-1.appspot.com/currency?from=$1&to=$2" | jshon -e rate)
 	if [ $? -ne 0 ] ; then
 		logger "$0: curl error"
