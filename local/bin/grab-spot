@@ -8,6 +8,8 @@ if [ -z $2 ]; then
 	exit
 fi
 
-rate=$(curl "http://rate-exchange-1.appspot.com/currency?from=$1&to=$2" | jshon -e rate)
-
-echo "$1$2: $rate" > ~/.cache/"$1$2"
+# Only bother downloading if it's more than 3 hours old
+if [ $(find ~/.cache/"$1$2" -mmin +180) ] ; then
+	rate=$(curl "http://rate-exchange-1.appspot.com/currency?from=$1&to=$2" | jshon -e rate)
+	echo "$1$2: $rate" > ~/.cache/"$1$2"
+fi
