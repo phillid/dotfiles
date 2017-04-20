@@ -1,7 +1,0 @@
-#!/bin/sh
-
-n=$1
-
-[ -z $n ] && n=1
-
-mpv tv:// -tv device=/dev/video$n
