@@ -7,6 +7,7 @@ while true; do
 	if hash upsc 2>/dev/null; then
 		ups="UPS: $(upsc eaton5e@zoidberg battery.charge)% $sep "
 	fi
+	currency=
 	if [ ! -z "$(ls -A ~/.cache/currency/)" ] ; then
 		for c in ~/.cache/currency/* ; do
 			currency="$currency$(cat $c) "
