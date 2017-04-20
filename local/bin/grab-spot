@@ -1,3 +1,14 @@
+#!/bin/sh
+
+# Grabs a spot price for a currency and stores it in ~/.cache
+# Useful to run as a cron job and use its cached output in motds or status
+# lines
+#
+# syntax: grab-spot TO FROM
+# for example, to get the value of USD in NZD:
+#     grab-spot USD NZD
+# would place a file at ~/.cache/USDNZD containing the value of the USD in NZD,
+# to 4 decimal places
 
 if [ -z $1 ]; then
 	logger "$0: blank FROM currency"
