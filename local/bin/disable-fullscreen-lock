@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Periodically checks if the active window is a full screen one and if so,
+# uses xdotool to simulate a keypress and unsets+sets DPMS to attempt to
+# stop a screen locker from locking the screen.
+# My primary use case is for watching youtube videos in full screen without
+# needing to wriggle the mouse periodically
+
 DELAY=300
 
 while true; do
