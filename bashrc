@@ -49,6 +49,6 @@ fi
 
 [ -d ~/Maildir/new/ ] && [ "$(ls ~/Maildir/new/)" ] && echo 'New mail'
 
-[ -z "$(ls -A ~/.cache/currency)" ] || for c in ~/.cache/currency/* ; do
+[ -z "$(ls -A ~/.cache/currency 2>/dev/null)" ] || for c in ~/.cache/currency/* ; do
 	echo "$(cat $c) (at $(date +"%a %d %H:%M" --date=@$(stat -c %Y $c)))"
 done
