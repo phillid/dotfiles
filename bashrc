@@ -48,5 +48,7 @@ if [ -f ~/.cache/weather/forecast ]; then
 fi
 
 [ -d ~/Maildir/new/ ] && [ "$(ls ~/Maildir/new/)" ] && echo 'New mail'
-[ -f ~/.cache/XAGNZD ] && echo "$(cat ~/.cache/XAGNZD) (at $(date +"%a %d %H:%M" --date=@$(stat -c %Y ~/.cache/XAGNZD)))"
-[ -f ~/.cache/XAUNZD ] && echo "$(cat ~/.cache/XAUNZD) (at $(date +"%a %d %H:%M" --date=@$(stat -c %Y ~/.cache/XAUNZD)))"
+
+[ -z "$(ls -A ~/.cache/currency)" ] || for c in ~/.cache/currency/* ; do
+	echo "$(cat $c) (at $(date +"%a %d %H:%M" --date=@$(stat -c %Y $c)))"
+done

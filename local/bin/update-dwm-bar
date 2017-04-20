@@ -7,8 +7,11 @@ while true; do
 	if hash upsc 2>/dev/null; then
 		ups="UPS: $(upsc eaton5e@zoidberg battery.charge)% $sep "
 	fi
-	if [ -f ~/.cache/XAGNZD ]; then
-		xa="$(cat ~/.cache/XAGNZD) $(cat ~/.cache/XAUNZD) $sep "
+	if [ ! -z "$(ls -A ~/.cache/currency/)" ] ; then
+		for c in ~/.cache/currency/* ; do
+			currency="$currency$(cat $c) "
+		done
+		currency="$currency$sep "
 	fi
 	if [ -d "/sys/class/power_supply/BAT0/" ]; then
 		bat="$(cat /sys/class/power_supply/BAT0/capacity)%"
@@ -35,7 +38,7 @@ while true; do
 	done
 	thermal_string="${thermal_string%,} °C"
 	datetime_string=$(date "+%A $sep %d %h %Y $sep %_I:%M %p (UTC%:::z)")
-	xsetroot -name "$xa$ups$thermal_string $sep $bat_string$datetime_string" || exit
+	xsetroot -name "$currency$ups$thermal_string $sep $bat_string$datetime_string" || exit
 	sleep "$DELAY"
 done
 
