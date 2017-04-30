@@ -26,5 +26,5 @@ if ([ ! -f ~/.cache/currency/"$1$2" ] || [ $(find ~/.cache/currency/"$1$2" -mmin
 		logger "$0: curl error"
 		exit
 	fi
-	printf "$1$2: %.4f" $rate > ~/.cache/"$1$2"
+	printf "$1$2: %.4f" $rate > ~/.cache/currency/"$1$2"
 fi
