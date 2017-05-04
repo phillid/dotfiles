@@ -5,9 +5,13 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set backspace=2
 
+" Force remap C+Left and C+Right for moving on words in insert mode
 map <ESC>[1;5C <C-Right>
 map <ESC>[1;5D <C-Left>
+map! <ESC>[1;5C <C-Right>
+map! <ESC>[1;5D <C-Left>
 
 "set listchars=tab:▸\ ,trail:·,space:·
 set listchars=tab:→\ ,trail:·,space:·
