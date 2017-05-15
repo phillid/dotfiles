@@ -5,7 +5,8 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <0> <space>                        : "​" # U200b ZERO WIDTH SPACE
 <Multi_key> <h> <period>                       : "｡" # HALFWIDTH IDEOGRAPHIC FULL STOP
 <Multi_key> <s> <a> <x>                        : "🎷" # Saxamaphone
-<Multi_key> <bracketleft> <b> <bracketright>    : "🅱" # Meme B
+<Multi_key> <bracketleft> <b> <bracketright>   : "🅱" # Meme B
+<Multi_key> <p> <h> <a> <l>                    : "𓂺" # Phallus hieroglyph
 
 # EMOTICONS
 <Multi_key> <less> <3>                         : "❤"   # Nicer heart than default (♥)
