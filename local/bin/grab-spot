@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Warning: uses a non-existant currency API
+
 # Grabs a spot price for a currency and stores it in ~/.cache
 # Useful to run as a cron job and use its cached output in motds or status
 # lines
@@ -21,7 +23,7 @@ fi
 
 # Only bother downloading if it's more than 1 hour old
 if ([ ! -f ~/.cache/currency/"$1$2" ] || [ $(find ~/.cache/currency/"$1$2" -mmin +60) ]) ; then
-	rate=$(curl "http://rate-exchange-1.appspot.com/currency?from=$1&to=$2" | jshon -e rate)
+	rate=$(curl -L "https://finance.yahoo.com/d/quotes.csv?e=.csv&f=c4l1&s=$1$2=X" | cut -d ',' -f 2)
 	if [ $? -ne 0 ] ; then
 		logger "$0: curl error"
 		exit
