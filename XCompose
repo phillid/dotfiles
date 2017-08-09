@@ -19,6 +19,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <less> <3>                         : "❤"   # Nicer heart than default (♥)
 <Multi_key> <less> <backslash> <3>             : "💔"   # Heartbroken :(
 <Multi_key> <o> <underscore> <o>               : "ಠ_ಠ" # LOOK OF DISAPPROVAL
+<Multi_key> <3> <period> <3>                   : "😍" # Hearts for eyes emoji
 <Multi_key> <colon> <D>                        : "😃"   # :D
 <Multi_key> <semicolon> <parenright>           : "😉"   # ;)
 <Multi_key> <colon> <p>                        : "😛"   # :p
