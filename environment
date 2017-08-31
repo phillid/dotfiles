@@ -13,5 +13,8 @@ elif hash tcc 2>/dev/null ; then
 	export CC=tcc
 fi
 
+# Do separate paths on '/' for word operations like ^W
+WORDCHARS=${WORDCHARS/\//}
+
 # u=rwx,g=,o=
 umask 077
