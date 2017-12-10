@@ -15,8 +15,8 @@ ccc() {
 alias sudo="sudo "
 alias monut=mount
 alias pamcan=pacman
-alias ls="/bin/ls --color=auto"
 alias sl=ls
+alias ls="ls -F"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias xpdf="xpdf -cont"
