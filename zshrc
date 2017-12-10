@@ -5,7 +5,7 @@ compinit
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
-SAVEHIST=10000
+SAVEHIST=100000
 
 # no beeping ಠ_ಠ
 unsetopt beep
