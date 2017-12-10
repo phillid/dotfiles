@@ -29,6 +29,7 @@ nnoremap O Ox<BS>
 
 autocmd FileType python setlocal expandtab
 autocmd FileType haskell setlocal expandtab
+autocmd FileType lhaskell setlocal expandtab
 
 """"""""""""""""""""""""""""""
 " airline
