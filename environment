@@ -5,7 +5,7 @@ export EDITOR=/usr/bin/vim
 
 if hash clang 2>/dev/null; then
 	export CC=clang
-	export CXX=clang
+	export CXX=clang++
 elif hash gcc 2>/dev/null ; then
 	export CC=gcc
 	export CXX=g++
