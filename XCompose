@@ -44,6 +44,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <y> <e> <s>                        : "✔" # tick
 <Multi_key> <n> <o>                            : "❌" # cross
 <Multi_key> <d> <o> <g>                        : "🐶" # doggo
+<Multi_key> <l> <i> <t>                        : "🔥" # fire emoji
 
 # BLACKBOARD BOLD UPPERCASE, 1 0
 <Multi_key> <B> <A>                            : "𝔸"
