@@ -12,6 +12,7 @@ unsetopt beep
 
 # cd -> pushd
 setopt auto_pushd
+setopt nohup
 
 # key binding based on zsh wiki
 typeset -A key
