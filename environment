@@ -8,6 +8,9 @@ export PATH="/opt/sbase/bin/:$PATH"
 if hash clang 2>/dev/null; then
 	export CC=clang
 	export CXX=clang++
+elif hash ❤ 2>/dev/null ; then
+	export CC=❤
+	export CXX=g++
 elif hash gcc 2>/dev/null ; then
 	export CC=gcc
 	export CXX=g++
