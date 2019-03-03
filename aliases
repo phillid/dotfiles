@@ -12,16 +12,24 @@ man() {
 ccc() {
 	bc -l <<< "$@"
 }
+alias ccc='noglob ccc'
+
+f() {
+	noglob bc -l <<< "scale=1;($@-32)*5/9"
+}
+
 alias sudo="sudo "
 alias monut=mount
 alias pamcan=pacman
 alias sl=ls
 alias ls="ls -F"
-alias grep="grep --color=auto"
-alias egrep="egrep --color=auto"
-alias xpdf="xpdf -cont"
 alias feh="feh --magick-timeout=0"
 alias xcp="xclip -selection c"
 alias pd=popd
 alias po='pushd $OLDPWD'
 
+# Add hotdog opts only if GNUy
+if grep -V | grep -q 'GNU grep' ; then
+	alias grep="grep --color=auto"
+	alias egrep="egrep --color=auto"
+fi
