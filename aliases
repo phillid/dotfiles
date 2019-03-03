@@ -18,6 +18,7 @@ f() {
 	noglob bc -l <<< "scale=1;($@-32)*5/9"
 }
 
+alias pacman="PATH=$ORIG_PATH pacman"
 alias sudo="sudo "
 alias monut=mount
 alias pamcan=pacman

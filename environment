@@ -2,6 +2,8 @@
 
 export GPG_TTY=$(tty)
 export EDITOR=/usr/bin/vim
+export ORIG_PATH="$PATH"
+export PATH="/opt/sbase/bin/:$PATH"
 
 if hash clang 2>/dev/null; then
 	export CC=clang
