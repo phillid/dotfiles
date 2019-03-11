@@ -30,7 +30,7 @@ alias pd=popd
 alias po='pushd $OLDPWD'
 
 # Add hotdog opts only if GNUy
-if grep -V | grep -q 'GNU grep' ; then
+if grep -V 2>/dev/null | grep -q 'GNU grep' ; then
 	alias grep="grep --color=auto"
 	alias egrep="egrep --color=auto"
 fi
