@@ -3,7 +3,7 @@ set cc=80,120
 set number
 
 set foldmethod=syntax
-set nofoldenable
+autocmd BufEnter * silent! %foldopen!
 
 set autoindent
 set tabstop=4
