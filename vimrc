@@ -1,5 +1,9 @@
 syntax on
-set cc=80
+set cc=80,120
+set number
+
+set foldmethod=syntax
+set nofoldenable
 
 set autoindent
 set tabstop=4
@@ -13,15 +17,16 @@ map <ESC>[1;5D <C-Left>
 map! <ESC>[1;5C <C-Right>
 map! <ESC>[1;5D <C-Left>
 
-"set listchars=tab:▸\ ,trail:·,space:·
-set listchars=tab:→\ ,trail:·,space:·
+set listchars=tab:─\ ,trail:·,space:·,nbsp:␣,extends:⯈,precedes:⯇
+set showbreak=\\ 
 set list
 
 
 highlight ExtraWhitespace ctermbg=red guibg=red
+highlight SpecialKey ctermfg=23
+highlight NonText ctermfg=23
+highlight Folded ctermbg=0
 match ExtraWhitespace /\s\+$/
-
-set number
 
 inoremap <CR> <CR>x<BS>
 nnoremap o ox<BS>
