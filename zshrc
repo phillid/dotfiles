@@ -55,7 +55,7 @@ RPROMPT='[%?] %w %t'
 source /usr/share/git/completion/git-prompt.sh
 source ~/.environment
 source ~/.aliases
-source ~/.aliases.zsh
+[ -f ~/.aliases.sh ] && source ~/.aliases.zsh
 
 echo Running $(uname) $(uname -r) on $(uname -n) \($(uname -m)\)
 
