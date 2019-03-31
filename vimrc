@@ -26,6 +26,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 highlight SpecialKey ctermfg=23
 highlight NonText ctermfg=23
 highlight Folded ctermbg=0
+highlight ColorColumn ctermbg=234
 match ExtraWhitespace /\s\+$/
 
 inoremap <CR> <CR>x<BS>
