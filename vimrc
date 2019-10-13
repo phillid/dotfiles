@@ -33,6 +33,28 @@ inoremap <CR> <CR>x<BS>
 nnoremap o ox<BS>
 nnoremap O Ox<BS>
 
+function! ToggleHlsearch()
+    if &hlsearch
+        nohlsearch
+        set nohlsearch
+    else
+        set hlsearch
+    endif
+endfunction
+
+" highlighted search colours
+hi Search ctermbg=DarkYellow ctermfg=Black
+nnoremap <C-_> :call ToggleHlsearch()<cr>
+
+hi Todo ctermbg=DarkGreen ctermfg=Black
+
+
+set expandtab
+autocmd BufRead,BufNewFile *.cli setfiletype xml
+"autocmd FileType c setlocal expandtab
+autocmd FileType make set noexpandtab
+autocmd FileType cpp setlocal expandtab
+autocmd FileType bitbake setlocal expandtab
 autocmd FileType python setlocal expandtab
 autocmd FileType haskell setlocal expandtab
 autocmd FileType lhaskell setlocal expandtab
@@ -56,3 +78,9 @@ let g:airline_powerline_fonts = 1
 
 " makes airline work before split
 set laststatus=2
+
+" Nicer colours for solarised vimdiff
+highlight DiffAdd    cterm=bold ctermfg=233  ctermbg=101 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=175  ctermbg=175 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=234  ctermbg=101 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=none ctermfg=242  ctermbg=0   gui=none guifg=bg guibg=Red
