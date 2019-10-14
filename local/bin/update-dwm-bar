@@ -39,7 +39,7 @@ while true; do
 	done
 	thermal_string="${thermal_string%,} °C"
 	datetime_string=$(date "+%A $sep %d %h %Y $sep %_I:%M %p (UTC%:::z)")
-	xsetroot -name "$currency$ups$thermal_string $sep $bat_string$datetime_string" || exit
+	xsetroot -name " $currency$ups$thermal_string $sep $bat_string$datetime_string" || exit
 	sleep "$DELAY"
 done
 
