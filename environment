@@ -1,20 +1,21 @@
 #!/bin/sh
 
+bin_available() {
+	where "$1" | grep -vq ccache
+}
+
 export GPG_TTY=$(tty)
 export EDITOR=/usr/bin/vim
 export ORIG_PATH="$PATH"
 export PATH="/opt/sbase/bin/:$PATH"
 
-if hash clang 2>/dev/null; then
+if bin_available clang; then
 	export CC=clang
 	export CXX=clang++
-elif hash ❤ 2>/dev/null ; then
-	export CC=❤
-	export CXX=g++
-elif hash gcc 2>/dev/null ; then
+elif bin_available gcc ; then
 	export CC=gcc
 	export CXX=g++
-elif hash tcc 2>/dev/null ; then
+elif bin_available tcc ; then
 	export CC=tcc
 fi
 

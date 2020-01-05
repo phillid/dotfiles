@@ -23,6 +23,9 @@ key[Insert]="$terminfo[kich1]"
 key[Backspace]="$terminfo[kbs]"
 key[Delete]="$terminfo[kdch1]"
 
+# Emacs-like bindings default
+bindkey -e
+
 # setup key accordingly
 [[ -n "$key[Home]"      ]] && bindkey -- "$key[Home]"      beginning-of-line
 [[ -n "$key[End]"       ]] && bindkey -- "$key[End]"       end-of-line
