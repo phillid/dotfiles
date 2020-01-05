@@ -30,6 +30,8 @@ highlight ColorColumn ctermbg=234
 match ExtraWhitespace /\s\+$/
 
 inoremap <CR> <CR>x<BS>
+inoremap jj <ESC>
+inoremap jk <ESC>
 nnoremap o ox<BS>
 nnoremap O Ox<BS>
 
