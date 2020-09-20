@@ -23,6 +23,9 @@ key[Insert]="$terminfo[kich1]"
 key[Backspace]="$terminfo[kbs]"
 key[Delete]="$terminfo[kdch1]"
 
+bindkey -e
+bindkey "^R" history-incremental-search-backward
+
 # setup key accordingly
 [[ -n "$key[Home]"      ]] && bindkey -- "$key[Home]"      beginning-of-line
 [[ -n "$key[End]"       ]] && bindkey -- "$key[End]"       end-of-line

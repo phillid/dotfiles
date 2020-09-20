@@ -77,6 +77,8 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <F> <L> <I> <P>                    : "(╯°□°）╯︵ ┻━┻"
 <Multi_key> <p> <u> <t>                        : "ノ( ゜-゜ノ)"
 <Multi_key> <d> <o> <n> <g>                    : "ヽ༼ຈلຈ༽ﾉ"
+<Multi_key> <t> <i> <n> <y>                    : "🤏"
+<Multi_key> <e> <y> <e> <s>                    : "👀"
 
 # BLACKBOARD BOLD UPPERCASE, 1 0
 <Multi_key> <B> <A>                            : "𝔸"

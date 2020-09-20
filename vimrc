@@ -30,8 +30,11 @@ highlight ColorColumn ctermbg=234
 match ExtraWhitespace /\s\+$/
 
 inoremap <CR> <CR>x<BS>
+inoremap jj <ESC>
+inoremap jk <ESC>
 nnoremap o ox<BS>
 nnoremap O Ox<BS>
+set pastetoggle=<F2>
 
 function! ToggleHlsearch()
     if &hlsearch
@@ -49,11 +52,13 @@ nnoremap <C-_> :call ToggleHlsearch()<cr>
 hi Todo ctermbg=DarkGreen ctermfg=Black
 
 
-set expandtab
+"set expandtab
 autocmd BufRead,BufNewFile *.cli setfiletype xml
+autocmd BufRead,BufNewFile *.bnf setfiletype bnf
 "autocmd FileType c setlocal expandtab
 autocmd FileType make set noexpandtab
-autocmd FileType cpp setlocal expandtab
+"autocmd FileType cpp setlocal expandtab
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType bitbake setlocal expandtab
 autocmd FileType python setlocal expandtab
 autocmd FileType haskell setlocal expandtab
