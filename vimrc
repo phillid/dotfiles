@@ -89,3 +89,26 @@ highlight DiffAdd    cterm=bold ctermfg=233  ctermbg=101 gui=none guifg=bg guibg
 highlight DiffDelete cterm=bold ctermfg=175  ctermbg=175 gui=none guifg=bg guibg=Red
 highlight DiffChange cterm=bold ctermfg=234  ctermbg=101 gui=none guifg=bg guibg=Red
 highlight DiffText   cterm=none ctermfg=242  ctermbg=0   gui=none guifg=bg guibg=Red
+
+let g:previousmode = 'i'
+function PushModeSwitchNormal() abort
+	let g:previousmode = mode()
+	" important: l so that we don't walk backward every time clutch is pushed
+	return "\<C-\>\<C-n>l"
+endfunction
+
+function PopMode() abort
+	return g:previousmode
+endfunction
+
+inoremap <expr> <F11> PushModeSwitchNormal()
+vnoremap <expr> <F11> PushModeSwitchNormal()
+xnoremap <expr> <F11> PushModeSwitchNormal()
+snoremap <expr> <F11> PushModeSwitchNormal()
+onoremap <expr> <F11> PushModeSwitchNormal()
+inoremap <F12> <Nop>
+vnoremap <F12> <Nop>
+xnoremap <F12> <Nop>
+snoremap <F12> <Nop>
+onoremap <F12> <Nop>
+nnoremap <expr> <F12> PopMode()
