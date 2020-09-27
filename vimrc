@@ -63,6 +63,7 @@ autocmd FileType bitbake setlocal expandtab
 autocmd FileType python setlocal expandtab
 autocmd FileType haskell setlocal expandtab
 autocmd FileType lhaskell setlocal expandtab
+autocmd FileType perl setlocal noexpandtab
 
 """"""""""""""""""""""""""""""
 " airline
