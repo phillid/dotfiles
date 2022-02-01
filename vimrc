@@ -113,3 +113,5 @@ xnoremap <F12> <Nop>
 snoremap <F12> <Nop>
 onoremap <F12> <Nop>
 nnoremap <expr> <F12> PopMode()
+
+au FileType gitcommit setlocal tw=72
