@@ -27,6 +27,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 #<Multi_key> <r> <X>                            : "Ж"
 #<Multi_key> <r> <Y>                            : "Й"
 #<Multi_key> <r> <Z>                            : "З"
+<Multi_key> <x> <i> <e>                        : "谢谢"
 
 # USEFUL STUFF
 <Multi_key> <d> <o> <t>                        : "·" # Mid dot for multiplication or units
